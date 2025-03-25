@@ -9,7 +9,7 @@ public class four {
     int d;
     double e;
     double f;
-
+    
     public four(String a, String b, String c, int d, double e, double f) {
         this.a = new SimpleStringProperty(a);
         this.b = new SimpleStringProperty(b);

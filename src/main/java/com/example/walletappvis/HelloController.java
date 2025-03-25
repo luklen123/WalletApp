@@ -182,7 +182,7 @@ public class HelloController implements Initializable{
         ArrayList<Belongings> act = application.getAll_belongings(c1);
         for(Belongings b: act){
             if(b.type == "currency"){
-                dataTable.getItems().add(new four(b.type, b.code, b.code, (int)b.amount, application.getCurrency_rate(b.code), setPrecision(b.amount*application.getCurrency_rate(b.code))));
+                dataTable.getItems().add(new four(b.type, b.code, b.code, (int)b.amount, application.getCurrency_rate(b.code), setPrecision((b.amount*application.getCurrency_rate(b.code))/application.getCurrency_volume(b.code))));
             } else if(b.type == "shares"){
                 //dataTable.getItems().add(new four());
             } else if(b.type == "metals"){
